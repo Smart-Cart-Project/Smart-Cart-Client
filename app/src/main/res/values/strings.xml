@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Smart-Cart-Client</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="enter_the_cart_id">Enter the cart ID</string>
+    <string name="main_text_view">Smart Cart Application</string>
+    <string name="main_button">Submit</string>
+</resources>
