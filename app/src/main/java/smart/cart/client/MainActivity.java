@@ -14,9 +14,28 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import smart.cart.client.shared.MyListAdapter;
+
 public class MainActivity extends AppCompatActivity {
 
-    private List<String> sampleItems = new ArrayList<>(Arrays.asList("Tomatoes", "Potatoes", "Cucumber", "Milk", "Cheese"));
+    ListView list;
+
+    String[] maintitle = {
+            "Tomatoes","Potatoes",
+            "Cucumber","Milk",
+            "Cheese",
+    };
+    String[] subtitle = {
+            "First Item","Second Item",
+            "Third Item","Fourth Item",
+            "Fifth Item",
+    };
+
+    Integer[] imgid = {
+            R.drawable.tomato,R.drawable.potato,
+            R.drawable.cucumber,R.drawable.milk,
+            R.drawable.cheese,
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,11 +48,10 @@ public class MainActivity extends AppCompatActivity {
                 String cartId = textInputEditText.getText().toString();
                 setContentView(R.layout.items_list);
                 setTitle("Cart Items - " + cartId);
-                ArrayAdapter adapter = new ArrayAdapter<String>(this,
-                        android.R.layout.simple_list_item_1,
-                        sampleItems);
-                ListView listView = (ListView) findViewById(R.id.itemsList);
-                listView.setAdapter(adapter);
+
+                MyListAdapter adapter = new MyListAdapter(this, maintitle, subtitle,imgid);
+                list = (ListView)findViewById(R.id.itemsList);
+                list.setAdapter(adapter);
             }
         });
     }
