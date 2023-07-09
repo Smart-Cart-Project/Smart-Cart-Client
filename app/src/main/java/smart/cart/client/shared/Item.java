@@ -16,7 +16,6 @@ public class Item {
     }
 
     public Item() {
-        // Default
     }
 
     public String getItemId() {

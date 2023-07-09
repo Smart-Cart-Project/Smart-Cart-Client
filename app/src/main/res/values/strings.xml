@@ -6,4 +6,5 @@
     <string name="enter_the_cart_id">Enter the cart ID</string>
     <string name="main_text_view">Smart Cart Application</string>
     <string name="main_button">Submit</string>
+    <string name="refresh">Refresh</string>
 </resources>

@@ -1,4 +1,6 @@
 package smart.cart.client.shared;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 
 import android.view.LayoutInflater;
@@ -13,34 +15,35 @@ import smart.cart.client.R;
 public class MyListAdapter extends ArrayAdapter<String> {
 
     private final Activity context;
-    private final String[] maintitle;
+    private final String[] mainTitle;
     private final String[] subtitle;
-    private final Integer[] imgid;
+    private final Integer[] imgId;
 
-    public MyListAdapter(Activity context, String[] maintitle,String[] subtitle, Integer[] imgid) {
+    public MyListAdapter(Activity context, String[] maintitle, String[] subtitle, Integer[] imgId) {
         super(context, R.layout.mylist, maintitle);
-        // TODO Auto-generated constructor stub
 
-        this.context=context;
-        this.maintitle=maintitle;
-        this.subtitle=subtitle;
-        this.imgid=imgid;
+        this.context = context;
+        this.mainTitle = maintitle;
+        this.subtitle = subtitle;
+        this.imgId = imgId;
 
     }
 
-    public View getView(int position,View view,ViewGroup parent) {
-        LayoutInflater inflater=context.getLayoutInflater();
-        View rowView=inflater.inflate(R.layout.mylist, null,true);
+    public View getView(int position, View view, ViewGroup parent) {
+        LayoutInflater inflater = context.getLayoutInflater();
+        @SuppressLint("ViewHolder") View rowView = inflater.inflate(R.layout.mylist, null, true);
 
-        TextView titleText = (TextView) rowView.findViewById(R.id.title);
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
-        TextView subtitleText = (TextView) rowView.findViewById(R.id.subtitle);
+        TextView titleText = rowView.findViewById(R.id.title);
+        ImageView imageView = rowView.findViewById(R.id.icon);
+        TextView subtitleText = rowView.findViewById(R.id.subtitle);
 
-        titleText.setText(maintitle[position]);
-        imageView.setImageResource(imgid[position]);
+        titleText.setText(mainTitle[position]);
+
+        imageView.setImageResource(imgId[position]);
         subtitleText.setText(subtitle[position]);
 
         return rowView;
 
-    };
+    }
+
 }
