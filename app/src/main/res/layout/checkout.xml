@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/creditcard"
+        android:contentDescription="@string/creditCardImage" />
+
+    <EditText
+        android:id="@+id/cardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:autofillHints=""
+        android:background="@color/grey"
+        android:hint="@string/cardNumber"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textColorHint="@color/green"
+        android:textSize="16sp"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <LinearLayout
+        android:id="@+id/expirationCvvLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardNumber"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/cardExpirationDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@color/grey"
+            android:hint="@string/cardExpirationDate"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textColorHint="@color/green"
+            android:textSize="16sp"
+            android:inputType="date"
+            android:importantForAutofill="no"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <EditText
+            android:id="@+id/cardCVV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@color/grey"
+            android:hint="@string/cardCVV"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textColorHint="@color/green"
+            android:textSize="16sp"
+            android:inputType="number"
+            android:importantForAutofill="no"
+            tools:ignore="VisualLintTextFieldSize" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/buttonsLayout"
+        android:background="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/green" />
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@color/grey"
+            android:text="@string/cancel"
+            android:textColor="@color/purple"
+            tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@color/grey"
+            android:text="@string/confirm"
+            android:textColor="@color/purple"
+            tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+    </LinearLayout>
+
+</RelativeLayout>

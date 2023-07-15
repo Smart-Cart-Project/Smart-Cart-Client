@@ -9,15 +9,17 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import smart.cart.client.MainActivity;
 import smart.cart.client.R;
 
 public class Helpers {
+    private static final String url = "https://smart-cart-service.onrender.com/items";
+
     public interface GetItemsCallback {
         void onItemsReceived(Item[] items);
     }
 
     public static void getItems(String cartId, GetItemsCallback callback) {
-        String url = "https://smart-cart-service.onrender.com/items";
 
         try {
             String requestUrl = url + "?cartId=" + cartId;

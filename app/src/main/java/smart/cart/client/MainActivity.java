@@ -58,6 +58,22 @@ public class MainActivity extends AppCompatActivity {
 
         totalPriceTextView = findViewById(R.id.totalPrice);
         itemsListView = findViewById(R.id.itemsList);
+
+        Button checkoutButton = findViewById(R.id.checkout);
+        checkoutButton.setOnClickListener(v -> checkout(cartId, totalPrice, this));
+    }
+
+    private void checkout(String cartId, double totalPrice, MainActivity mainActivity) {
+        setContentView(R.layout.checkout);
+        setTitle("Checkout");
+
+        Button cancelButton = findViewById(R.id.cancel);
+        cancelButton.setOnClickListener(v -> refreshItems(cartId));
+
+        TextView totalPriceTextView = findViewById(R.id.totalPrice);
+        String totalPriceString = "Total: " + totalPrice + "€";
+        totalPriceTextView.setText(totalPriceString);
+
     }
 
     private void fetchItemsAndUpdateUI(String cartId) {
