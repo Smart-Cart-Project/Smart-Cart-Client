@@ -6,7 +6,7 @@ This is a simple Android application that allows users to check which items have
 
 ## Installation
 
-Download the APK file from the following link: apk.
+Download the APK file from the following link: [apk](https://transfer.sh/YeprFR39GN/smart-cart-application.apk)
 
 After that, install the APK file on your Android device. If it asks you to allow installation from unknown sources, please allow it.
 
