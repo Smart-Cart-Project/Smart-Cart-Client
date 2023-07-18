@@ -1,5 +1,9 @@
 # Smart Cart Application
 
+## Demo
+<img src="https://github.com/Smart-Cart-Project/Smart-Cart-Client/assets/98538725/41c2860d-e360-4902-8aa9-1f8ddffffbc7" height=600 width=250 />
+
+
 ## Description
 
 This is a simple Android application that allows users to check which items have been added to their cart and the total cost of the items in the cart, after they have scanned the items' barcodes using the Smart Cart.
