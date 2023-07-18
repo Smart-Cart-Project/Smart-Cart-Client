@@ -7,6 +7,8 @@
     <string name="main_text_view">Smart Cart Application</string>
     <string name="main_button">Submit</string>
     <string name="refresh">Refresh</string>
+    <string name="home">Home</string>
+    <string name="welcomeText">Welcome to Smart Cart Application!</string>
     <string name="checkout">Checkout</string>
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>

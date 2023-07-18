@@ -24,9 +24,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
+            android:fontFamily="@font/courier_prime"
             android:padding="2dp"
             android:text="Medium Text"
-            android:fontFamily="@font/courier_prime"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/purple"
             android:textStyle="bold" />
@@ -39,5 +39,12 @@
             android:fontFamily="@font/courier_prime"
             android:text="TextView"
             android:textColor="@color/green" />
+
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="Delete"></Button>
 </LinearLayout>

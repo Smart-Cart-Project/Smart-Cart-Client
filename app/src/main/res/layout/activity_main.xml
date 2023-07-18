@@ -10,7 +10,7 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/cartIdInput"
-        android:layout_width="331dp"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:background="@drawable/border"
         android:fontFamily="@font/courier_prime"
@@ -19,14 +19,13 @@
         android:padding="20sp"
         android:textColor="@color/white"
         android:textColorHint="@color/cyan"
-        android:textSize="18sp"
-        android:textStyle="italic"
+        android:textSize="20sp"
         android:visibility="visible"
+        android:layout_marginBottom="30dp"
         app:barrierDirection="top"
         app:layout_constraintBottom_toTopOf="@+id/mainButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainLogo"
         app:layout_constraintVertical_bias="0.5"
         tools:visibility="visible" />
 
@@ -35,6 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/courier_prime"
+        android:layout_marginTop="50dp"
         android:padding="20sp"
         android:text="@string/main_text_view"
         android:textColor="@color/purple"
@@ -45,7 +45,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.505" />
+        app:layout_constraintVertical_bias="0.3" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:src="@drawable/logo" > </ImageView>
+
+    <TextView
+        android:id="@+id/mainTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/courier_prime"
+        android:layout_marginTop="300dp"
+        android:padding="20sp"
+        android:gravity="center"
+        android:text="@string/welcomeText"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/cartIdInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
 
     <Button
         android:id="@+id/mainButton"
@@ -58,9 +82,8 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.688" />
+        app:layout_constraintVertical_bias="0.9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

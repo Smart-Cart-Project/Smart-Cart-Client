@@ -72,8 +72,10 @@ public class Helpers {
             case "Fish" -> R.drawable.fish;
             case "Rice" -> R.drawable.rice;
             case "CocaCola" -> R.drawable.cocacola;
-            case "Nutela" -> R.drawable.nutela;
-            default -> R.drawable.ic_launcher_foreground;
+            case "Coca Cola" -> R.drawable.cocacola;
+            case "Nutela" -> R.drawable.nutella;
+            case "Nutella" -> R.drawable.nutella;
+            default -> R.drawable.logo;
         };
 
     }

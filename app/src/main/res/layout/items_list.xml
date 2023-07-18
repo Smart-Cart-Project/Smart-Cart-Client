@@ -15,7 +15,7 @@
         android:id="@+id/itemsList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="120dp"
         android:background="@color/black"></ListView>
 
     <TextView
@@ -33,6 +33,17 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="60dp"
         android:text="@string/refresh"
+        android:textColor="@color/white"
+        tools:ignore="RelativeOverlap"></Button>
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:text="@string/home"
         android:textColor="@color/white"
         tools:ignore="RelativeOverlap"></Button>
 

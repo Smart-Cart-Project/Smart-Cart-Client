@@ -53,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.items_list);
         setTitle("Cart ID: " + cartId);
 
+        Button homeButton = findViewById(R.id.home);
+        homeButton.setOnClickListener(v -> returnToMainLayout());
+
         Button refreshButton = findViewById(R.id.refresh);
         refreshButton.setOnClickListener(v -> refreshItems(cartId));
 
@@ -60,10 +63,27 @@ public class MainActivity extends AppCompatActivity {
         itemsListView = findViewById(R.id.itemsList);
 
         Button checkoutButton = findViewById(R.id.checkout);
-        checkoutButton.setOnClickListener(v -> checkout(cartId, totalPrice, this));
+        checkoutButton.setOnClickListener(v -> checkout(cartId, totalPrice));
     }
 
-    private void checkout(String cartId, double totalPrice, MainActivity mainActivity) {
+    private void returnToMainLayout() {
+        setContentView(R.layout.activity_main);
+        setTitle("Smart Cart Client");
+        totalPrice = 0;
+
+        textInputEditText = findViewById(R.id.cartIdInput);
+        Button button = findViewById(R.id.mainButton);
+        button.setOnClickListener(view -> {
+            String cartId = Objects.requireNonNull(textInputEditText.getText()).toString().trim();
+            if (!cartId.isEmpty()) {
+                initializeItemListLayout(cartId);
+                fetchItemsAndUpdateUI(cartId);
+            }
+        });
+    }
+
+
+    private void checkout(String cartId, double totalPrice) {
         setContentView(R.layout.checkout);
         setTitle("Checkout");
 
